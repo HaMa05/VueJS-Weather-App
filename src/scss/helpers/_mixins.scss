@@ -1,0 +1,13 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin positionImg($idx: 0, $left: 0, $right: 0, $width: 100%, $height: 100%, $object: 'cover') {
+  z-index: $idx;
+  left: $left;
+  right: $right;
+  width: $width;
+  height: $height;
+  object-fit: $object;
+}

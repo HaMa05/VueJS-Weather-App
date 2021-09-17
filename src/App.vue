@@ -1,32 +1,38 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <h1 class="title position-absolute text-white font-weight-bold">
+      Dự báo thời tiết
+    </h1>
+    <background-image :nameImage="typeWeather"></background-image>
     <router-view />
   </div>
 </template>
+<script>
+import BackgroundImage from "./components/BackgroundImage.vue";
+export default {
+  name: "Home",
+  components: {
+    BackgroundImage,
+  },
+  props: {
+    typeWeather: {
+      type: String,
+      required: true,
+      default: "sun",
+    },
+  },
+};
+</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+<style lang="scss">
+@import "./scss/main";
+.title {
+  background: transparent;
+  left: 50%;
+  text-transform: uppercase;
+  font-size: 5rem;
+  transform: translateX(-50%);
+  margin-top: 3rem;
+  letter-spacing: 0.75rem;
 }
 </style>

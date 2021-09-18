@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div class="overlay position-absolute"></div>
+  <div class="">
     <div class="background-image position-absolute">
+      <div class="overlay position-absolute"></div>
       <img
         :src="require('@/assets/images/' + nameImage + '.jpg')"
         alt="icon-image"

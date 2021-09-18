@@ -1,9 +1,6 @@
 <template>
   <div class="image" :style="style">
-    <img
-      :src="require('@/assets/weather/day/' + codeImage + '.png')"
-      alt="icon-image"
-    />
+    <img :src="imageLink" alt="icon-image" />
   </div>
 </template>
 
@@ -11,19 +8,19 @@
 export default {
   name: "IconImage",
   props: {
-    codeImage: {
-      type: Number,
+    imageLink: {
+      type: String,
       required: true,
     },
     width: {
       type: Number,
-      required: true,
-      default: 2,
+      required: false,
+      default: 7,
     },
     height: {
       type: Number,
-      required: true,
-      default: 2,
+      required: false,
+      default: 7,
     },
   },
   computed: {

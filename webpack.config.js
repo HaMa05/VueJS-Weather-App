@@ -1,3 +1,4 @@
+const Dotenv = require('dotenv-webpack');
 module.exports = {
   module: {
     rules: [
@@ -11,4 +12,5 @@ module.exports = {
       assetsSubDirectory: 'assets',
     },
   },
+  plugins: [new Dotenv()],
 };

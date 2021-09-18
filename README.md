@@ -1,5 +1,7 @@
 # vuejs-weather-app
 
+## Preview site: https://weather-nu-seven.vercel.app/
+
 ## Project setup
 ```
 npm install
